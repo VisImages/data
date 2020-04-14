@@ -1,0 +1,4 @@
+*.o
+pdffigures
+
+!.gitkeep
