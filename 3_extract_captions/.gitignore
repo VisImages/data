@@ -1,0 +1,5 @@
+*.o
+pdffigures
+
+precomputed/*.json
+!.gitkeep
