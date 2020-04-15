@@ -45,7 +45,7 @@ def parse_args():
 
     parser.add_argument("--src", "-s", default="vis_data/papers", help="pdf source path", type=str)
     parser.add_argument("--dst", "-d", default="vis_data/images", help="images destination path", type=str)
-    parser.add_argument("--annos", default="vis_data/vis_image_data.json", help="images destination path", type=str)
+    parser.add_argument("--annos", default="vis_data/visimages_data.json", help="images destination path", type=str)
 
     return parser.parse_args()
 

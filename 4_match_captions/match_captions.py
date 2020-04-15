@@ -97,11 +97,11 @@ def match_captions_in_page(image_dict, caption_dict):
 
 
 
-# cal center point according to vis_image_data
+# cal center point according to visimages_data
 def cal_center_point(paper_path, paper_id, page_num, bbox, dpi=1):
     height = 1
     width = 1
-    # transfer for bbox coordinates in 'vis_image_data.json'
+    # transfer for bbox coordinates in 'visimages_data.json'
     if dpi != 1:
         img = convert_from_path(os.path.join(paper_path, paper_id + ".pdf"), \
                                 dpi=dpi, first_page=page_num, last_page=page_num)
@@ -199,7 +199,7 @@ def parse_args():
     parser.add_argument("--paper", "-p", default="vis_data/papers", help="destination path", type=str)
     parser.add_argument("--src", "-s", default="3_extract_captions/pdffigures/precomputed", help="captions source path", type=str)
     parser.add_argument("--dst", "-d", default="vis_data/captions", help="destination path", type=str)
-    parser.add_argument("--annos", default="vis_data/vis_image_data.json", help="images destination path", type=str)
+    parser.add_argument("--annos", default="vis_data/visimages_data.json", help="images destination path", type=str)
 
     return parser.parse_args()
 
