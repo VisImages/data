@@ -40,7 +40,7 @@ cd 3_extract_captions
 make DEBUG=0
 ```
 
-2. Run on all the PDF documents and gain the results, and modify the file path in `shell.sh`:
+2. Run on all the PDF documents and gain the results, and modify the file path in `shell.sh` if you need:
 
 ```
 sh shell.sh
