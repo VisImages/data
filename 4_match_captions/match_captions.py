@@ -196,10 +196,10 @@ def match_captions(args):
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--paper", "-p", default="vis_data/papers", help="destination path", type=str)
+    parser.add_argument("--paper", "-p", default="vis_data/papers", help="paper pdf source path", type=str)
     parser.add_argument("--src", "-s", default="3_extract_captions/pdffigures/precomputed", help="captions source path", type=str)
     parser.add_argument("--dst", "-d", default="vis_data/captions", help="destination path", type=str)
-    parser.add_argument("--annos", default="vis_data/visimages_data.json", help="images destination path", type=str)
+    parser.add_argument("--annos", default="vis_data/visimages_data.json", help="visimage data source path", type=str)
 
     return parser.parse_args()
 

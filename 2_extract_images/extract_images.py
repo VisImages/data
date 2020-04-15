@@ -43,9 +43,9 @@ def extract_images(args):
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--src", "-s", default="vis_data/papers", help="pdf source path", type=str)
+    parser.add_argument("--src", "-s", default="vis_data/papers", help="paper pdf source path", type=str)
     parser.add_argument("--dst", "-d", default="vis_data/images", help="images destination path", type=str)
-    parser.add_argument("--annos", default="vis_data/visimages_data.json", help="images destination path", type=str)
+    parser.add_argument("--annos", default="vis_data/visimages_data.json", help="visimage data source path", type=str)
 
     return parser.parse_args()
 
