@@ -37,13 +37,13 @@ def extract_images(args):
         
         with open(os.path.join(dst_path, paper_id, "records.json"), "w") as output:
             json.dump(image_info, output)
-            print(paper)
+            print("Processing", paper)
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--src", "-s", default="vis_data/papers", help="paper pdf source path", type=str)
+    parser.add_argument("--src", "-s", default="vis_data/papers", help="paper pdf documents source path", type=str)
     parser.add_argument("--dst", "-d", default="vis_data/images", help="images destination path", type=str)
     parser.add_argument("--annos", default="vis_data/visimages_data.json", help="visimage data source path", type=str)
 
