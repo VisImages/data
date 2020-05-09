@@ -18,7 +18,8 @@ The following package should installed:
 ### Usage
 To collect all the PDF documents, simply run:<br>
 ```
-python 1_crawler/PaperScrapy.py
+cd 1_crawler
+python PaperScrapy.py
 ```
 
 ## 2. Extract Images
@@ -30,6 +31,7 @@ The following package should installed:
 ### Usage
 To extract images from PDF documents, simply run:<br>
 ```
+cd ..
 python 2_extract_images/extract_images.py
 ```
 You can use option '--help' for more information
