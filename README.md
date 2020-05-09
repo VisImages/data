@@ -13,7 +13,7 @@ Follow the steps below, you'll download all the PDF documents of VIS paper, and 
 ### Requirements
 The following package should installed:
 * `bs4`
-* `cv2`
+* `pypiwin32`
 
 ### Usage
 To collect all the PDF documents, simply run:<br>
