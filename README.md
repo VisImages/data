@@ -26,7 +26,7 @@ python PaperScrapy.py
 ### Requirements
 The following package should installed:
 * `pdf2image`
-* `pypiwin32`
+* `cv2`
 
 ### Usage
 To extract images from PDF documents, simply run:<br>
