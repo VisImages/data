@@ -42,3 +42,6 @@ ptvsd*.log
 pydevd*.log
 nodeLanguageServer/**
 nodeLanguageServer.*/**
+
+vis_data/papers/*
+vis_data/images/*

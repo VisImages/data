@@ -17,12 +17,19 @@ The following packages should be installed:
 * `requests`
 * `Pillow`
 
+### Installing Requirements
+Install the required python packages with
+```
+pip install -r requirements.txt
+```
+
 ### Usage
 To collect all the PDF documents, simply run:<br>
 ```
 cd 1_crawler
 python PaperScrapy.py
 ```
+The PDF files will be stored in `/vis_data/papers`. We borrow a paper list from [Vispubdata](https://sites.google.com/site/vispubdata/home) and index the papers with a number (please refer to `1_crawler/list.csv` for more details).
 
 ## 2. Extract Images
 ### Requirements
@@ -36,7 +43,8 @@ To extract images from PDF documents, simply run:<br>
 cd ..
 python 2_extract_images/extract_images.py
 ```
-You can use option '--help' for more information
+The default path of PDF files is `/vis_data/papers`, and the extracted images will be stored in `/vis_data/images`.
+You can specify the source directory for PDF files and target directory for images using `--src` and `--dst`
 <br>
 
 ## 3. Extract Captions
