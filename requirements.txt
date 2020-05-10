@@ -67,7 +67,7 @@ six==1.14.0
 system-service==0.3
 tabulate==0.8.6
 tensorboard==1.14.0
-tensorflow==1.14.0
+tensorflow==1.15.2
 tensorflow-estimator==1.14.0
 tensorpack==0.9.9
 termcolor==1.1.0
