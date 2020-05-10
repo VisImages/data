@@ -14,6 +14,8 @@ Follow the steps below, you'll download all the PDF documents of VIS paper, and 
 The following package should installed:
 * `bs4`
 * `pypiwin32`
+* `requests`
+* `Pillow`
 
 ### Usage
 To collect all the PDF documents, simply run:<br>
@@ -26,7 +28,7 @@ python PaperScrapy.py
 ### Requirements
 The following package should installed:
 * `pdf2image`
-* `cv2`
+* `opencv-python`
 
 ### Usage
 To extract images from PDF documents, simply run:<br>
