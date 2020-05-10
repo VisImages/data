@@ -1,17 +1,17 @@
 # VisImages Data
 
-<b>VisImages</b> is a high-quality dataset with large volume of visualization publication images and comprehensive categories 
-of visualizations, which contains 12267 visualization publication images with captions. Each image is annotated by the 
+<b>VisImages</b> is a high-quality dataset with large scale of visualization publication images and comprehensive categories 
+of visualizations, which contains 12,267 visualization publication images with captions. Each image is annotated by the 
 visualization types and locations (represented as bounding boxes).<br>
 
-However, due to copyright restrictions, we couldn't supply image and caption data directly. Instead, we provide annotation 
-file `vis_data/visimages_data.json` and this work. 
-Follow the steps below, you'll download all the PDF documents of VIS paper, and extract image and caption from those PDF documents easily.<br>
+However, due to copyright restrictions, we cannot supply image and caption data directly. Instead, we provide annotation 
+file `vis_data/visimages_data.json` and this repository. 
+Follow the steps below, you are able to download all the PDF documents of VIS paper through your access to the IEEE, and extract images and captions from those PDF documents easily.<br>
 <br>
 
 ## 1. Download Papers
 ### Requirements
-The following package should installed:
+The following packages should be installed:
 * `bs4`
 * `pypiwin32`
 * `requests`
@@ -26,7 +26,7 @@ python PaperScrapy.py
 
 ## 2. Extract Images
 ### Requirements
-The following package should installed:
+The following packages should be installed:
 * `pdf2image`
 * `opencv-python`
 
@@ -40,7 +40,7 @@ You can use option '--help' for more information
 <br>
 
 ## 3. Extract Captions
-We use [pdffigures](http://pdffigures.allenai.org/) to extract caption from PDF documents.
+We use [pdffigures](http://pdffigures.allenai.org/) to extract captions from PDF documents.
 
 ### Usage
 
@@ -87,8 +87,8 @@ pdffigures uses std::regex, therefore compiling on Ubuntu requires g++ >= 4.9
 pdffigures has been tested on MAC OS X 10.9 and 10.10, Ubuntu 14.04, 15.04, and 15.10, Windows is not supported.
 <br>
 
-## 4. Match Captions
-Match the extracted captions to visimages.
+## 4. Caption Matching
+Match the extracted captions to the images in VisImages according to the distance of the bounding boxes. If accurate captions are required, please contact us.
 
 ### Usage
 Simply run:
