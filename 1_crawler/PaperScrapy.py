@@ -9,7 +9,9 @@ from PIL import Image
 from io import BytesIO
 import threading
 import shutil
-from win32com.client import Dispatch
+import urllib.request, urllib.parse, urllib.error
+import http.cookiejar
+# from win32com.client import Dispatch
 
 
 proxies = {
@@ -76,8 +78,8 @@ class DownloadChecker(threading.Thread):
 
     def run(self):
         while True:
-            if os.path.isfile('./papers/{}'.format(self.o_name)):
-                shutil.move('./papers/{}'.format(self.o_name), './papers/{}'.format(self.t_name))
+            if os.path.isfile('../vis_data/papers/{}'.format(self.o_name)):
+                shutil.move('../vis_data/papers/{}'.format(self.o_name), '../vis_data/papers/{}'.format(self.t_name))
                 break
             time.sleep(5)
 
@@ -88,9 +90,20 @@ def download(pid, link):
         return
     print("Downloading {}".format(link))
     try:
-        thunder = Dispatch('ThunderAgent.Agent64.1')
-        thunder.AddTask(link, '{}.pdf'.format(pid))
-        thunder.CommitTasks()
+        # thunder = Dispatch('ThunderAgent.Agent64.1')
+        # thunder.AddTask(link, '{}.pdf'.format(pid))
+        # thunder.CommitTasks()
+        # data = urllib.request.urlopen(link).read()
+        cookie_filename = 'cookie.txt'
+        cookie = http.cookiejar.LWPCookieJar(cookie_filename)
+        handler = urllib.request.HTTPCookieProcessor(cookie)
+        opener = urllib.request.build_opener(handler)
+
+        request = urllib.request.Request(link, headers=headers["ieee"])
+        data = opener.open(request).read()
+        with open("../vis_data/papers/{}.pdf".format(pid), "wb") as f:
+            f.write(data)
+            f.close()
         checker = DownloadChecker(pid, link)
         checker.start()
     except Exception as _:
@@ -124,7 +137,7 @@ def main(file):
     count = len(csv_data)
     for i, d in enumerate(csv_data):
         print(i, ' / ', count)
-        if os.path.isfile("./papers/{}.pdf".format(i)) or os.path.isfile("./papers/{}.pdf.xltd".format(i)):
+        if os.path.isfile("../vis_data/papers/{}.pdf".format(i)) or os.path.isfile("../vis_data/papers/{}.pdf.xltd".format(i)):
             continue
             cmd = input("Paper {} {}\nwas downloaded. Re-download it? y/N:  ".format(i, d[1]))
             if cmd == 'y' or cmd == 'Y':
