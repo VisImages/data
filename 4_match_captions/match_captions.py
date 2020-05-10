@@ -134,7 +134,7 @@ def match_captions(args):
             continue
 
         # read caption info
-        with open(os.path.join(src_path, paper), "rb") as f:
+        with open(os.path.join(src_path, paper), "r") as f:
             captions = json.load(f)
             cur_paper = []
             caption_text_dict = dict()
