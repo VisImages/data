@@ -13,7 +13,6 @@ Follow the steps below, you are able to download all the PDF documents of VIS pa
 ### Requirements
 The following packages should be installed:
 * `bs4`
-* `pypiwin32`
 * `requests`
 * `Pillow`
 
