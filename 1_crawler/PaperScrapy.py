@@ -145,13 +145,5 @@ def main(file):
         else:
             download_paper(i, d)
 
-
-# def check(st_id, e_id):
-#     for i in range(st_id, e_id):
-
-
 if __name__ == "__main__":
-    # main("test.csv")
-    # check(0, 3101)
     main("list.csv")
-    # download(2085, 'https://ieeexplore.ieee.org/ielx5/2945/6064926/06064992.pdf?tp=&arnumber=6064992&isnumber=6064926&ref=')
