@@ -4,8 +4,6 @@
 of visualizations, which contains 12,267 visualization publication images with captions. Each image is annotated by the 
 visualization types and locations (represented as bounding boxes).<br>
 
-The extracted images, annotations, and metadata can be downloaded directly from [google drive](https://drive.google.com/drive/folders/1p00qs7PXCpbxhcaeDeYV4bENh8Jmn53r?usp=sharing).<br>
-
 In addition, following the steps below, you are able to download all the PDF documents of VIS paper through your access to the IEEE, and extract images and captions from those PDF documents easily.<br>
 
 
