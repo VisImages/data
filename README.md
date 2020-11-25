@@ -4,10 +4,10 @@
 of visualizations, which contains 12,267 visualization publication images with captions. Each image is annotated by the 
 visualization types and locations (represented as bounding boxes).<br>
 
-In addition, following the steps below, you are able to download all the PDF documents of VIS paper through your access to the IEEE, and extract images and captions from those PDF documents easily.<br>
+In addition, following the steps below, you are able to extract images and captions from the PDF documents easily.<br>
 
 
-## 1. Download Papers
+## 1. Prepare Papers
 ### Requirements
 The following packages should be installed:
 * `bs4`
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 
 ### Usage
-To collect all the PDF documents, simply run:<br>
+Simply run:<br>
 ```
 cd 1_crawler
 python PaperScrapy.py
